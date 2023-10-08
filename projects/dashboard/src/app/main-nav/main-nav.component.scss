@@ -1,0 +1,54 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+// Gaya untuk footer
+.footer {
+  background-color: #333; 
+  color: #fff;
+  padding: 20px 0; 
+  text-align: center; 
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.3); 
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #555; 
+    transform: scale(1.02);
+    box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.5); 
+  }
+}
+
+
+.footer-inner {
+  max-width: 1200px; // Lebar maksimum konten dalam footer
+  margin: 0 auto; // Pusatkan konten dalam footer
+}
+
+// Gaya tautan (opsional)
+.footer a {
+  color: #fff; // Warna tautan dalam footer
+  text-decoration: none; // Hapus garis bawah tautan
+}
+
+// Gaya tautan saat dihover (opsional)
+.footer a:hover {
+  text-decoration: underline; // Tambahkan garis bawah saat dihover
+}
+
+

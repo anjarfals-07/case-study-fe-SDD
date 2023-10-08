@@ -1,0 +1,73 @@
+<mat-card>
+  <mat-card-header>
+    <h1>Muhammad Anjar</h1>
+  </mat-card-header>
+  <mat-card-subtitle class="p-3">
+    <h3>Case Study Angular Micro Frond End</h3>
+  </mat-card-subtitle>
+  <mat-card-content>
+    <p>Micro Frontends (MFE) are the idea that a Single Page Application (SPA) can be divided into separate
+      specialized sections that give independent teams end-to-end ownership. This gives development teams the autonomy
+      to complete their work independently.
+      hoosing Micro Frontends implementation is a decision that needs to be evaluated carefully to ensure it meets
+      organizational needs. Some of the benefits of Micro Frontends include:
+
+
+
+      The use of different frameworks or UI libraries for each frontend to meet the team's needs or if the team
+      inherited a codebase that needs to be incorporated into an existing application.
+      Independent deployments as each frontend can be deployed independently of the rest of the application.
+      Allows the development team(s) to scale as each team will be working independently of the rest of the team(s).
+
+
+      These are awesome benefits for large development teams that work on an Enterprise size application. Micro
+      Frontends also has some limitations:
+
+
+
+      Complexity: adding different frameworks and having the ability to share code between frontend(s) can increase the
+      complexity for onboarding new team members.
+      Operational complexity: deployment to production can be complicated as each frontend needs to be deployed
+      independently and the container application needs to be updated and its release coordinated between different
+      teams.
+      Larger application bundles: with different frameworks and possibly code duplication between different frontend(s)
+      this can impact the performance of the application.
+    </p>
+    <br>
+    <h3>
+      Using Angular CLI
+    </h3>
+    <p>The implementation of Micro Frontends with Angular CLI is very similar to the way we implemented it with Nx
+      Workspace. We will begin with creating an empty workspace with the Angular CLI and creating the three projects
+      similar to what we did above. Then use ng add schematics to add the Micro Frontends configuration for each
+      project.
+
+      Create an empty workspace
+      To begin our implementation with the Angular CLI, we begin by creating an empty workspace so we can add the
+      projects we need for this Micro FrontEnd. The command we will issue to create an empty workspace is:</p>
+
+    <br>
+    <h4><b>ng new microFrontEnds --create-application false</b></h4>
+    <br>
+    <p>This schematic will generate few files but no project since we added --create-application false. This allows us
+      to add multiple applications to the project.</p>
+    <br>
+    <h3>
+      Adding Angular Application
+    </h3>
+    <br>
+    <p>
+      Create three different applications and use the same names we did in the above section. The commands we will
+      issue are:
+    </p><br>
+    <h4># We will create the shell application <br>
+      ng generate application shell --routing=true --style=scss <br>
+
+      # We will create the admin application <br>
+      ng generate application admin --routing=true --style=scss <br>
+
+      # We will create the dashboard application <br>
+      ng generate application dashboard --routing=true --style=scss</h4><br>
+    <p>We now have all the applications we need to start configuring our Micro FrontEnds.</p>
+  </mat-card-content>
+</mat-card>

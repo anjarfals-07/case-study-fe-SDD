@@ -1,0 +1,58 @@
+<!-- <div>
+  <h2>Dashboard</h2>
+  <a class="btn btn-primary" [routerLink]="['/info']">Info</a>
+  <a class="btn btn-primary" [routerLink]="['/users']">Users</a>
+  <a class="btn btn-primary" [routerLink]="['/']">Home</a>
+</div>
+
+
+<router-outlet></router-outlet> -->
+<!-- <app-main-nav></app-main-nav> -->
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <mat-list-item routerLink="/dashboard">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </mat-list-item>
+      <mat-list-item routerLink="/users">
+        <mat-icon>person</mat-icon>
+        <span>User</span>
+      </mat-list-item>
+      <mat-list-item routerLink="/info">
+        <mat-icon>info</mat-icon>
+        <span>Info</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>dashboard</span>
+    </mat-toolbar>
+
+    <!-- Tambahkan konten grafik di sini -->
+    <router-outlet></router-outlet> <!-- Tempatkan router-outlet di sini -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>&copy; Muhammad Anjar</p>
+        <a href="https://github.com/anjarfals-07">
+          <mat-icon>touch_app</mat-icon>
+          <span>Github</span>
+        </a>
+
+
+        <!-- <i class="fa fa-github p-2"><a
+          >Github</a></i> -->
+
+      </div>
+    </footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

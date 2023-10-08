@@ -1,0 +1,36 @@
+<!-- <h2>{{ user ? 'Edit Pengguna' : 'Tambah Pengguna' }}</h2>
+<form [formGroup]="form">
+  <mat-form-field appearance="fill">
+    <mat-label>Nama</mat-label>
+    <input matInput formControlName="name" required />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" required />
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="saveUser()">
+    {{ user ? 'Simpan Perubahan' : 'Tambah Pengguna' }}
+  </button>
+  <button mat-raised-button (click)="closeDialog()">Batal</button>
+</form> -->
+
+
+<div class="user-dialog">
+  <h2 class="user-dialog-title">{{ user ? 'Edit Pengguna' : 'Tambah Pengguna' }}</h2>
+  <form [formGroup]="form" class="user-form">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Nama</mat-label>
+      <input matInput formControlName="name" required />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" required />
+    </mat-form-field>
+    <div class="buttons">
+      <button mat-raised-button color="primary" (click)="saveUser()">
+        {{ user ? 'Simpan Perubahan' : 'Tambah Pengguna' }}
+      </button>
+      <button mat-raised-button (click)="closeDialog()">Batal</button>
+    </div>
+  </form>
+</div>
